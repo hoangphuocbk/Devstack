@@ -1,0 +1,16 @@
+sudo -i
+
+apt-get update ; apt-get -y upgrade ; apt-get install -y git vim python-pip \
+    build-essential libssl-dev libffi-dev python-dev python-jpype
+	
+pip install --upgrade setuptools
+pip install --upgrade urllib3
+pip install --upgrade urllib3[secure]
+pip install --upgrade apptools appdirs
+
+#back to Ubuntu user
+exit 
+
+sudo -H pip install --upgrade appdirs
+
+./stack.sh
